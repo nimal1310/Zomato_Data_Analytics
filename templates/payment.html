@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{ url_for('static', filename='css/style.css') }}">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Pay here</h1>
+
+    <h4><span> <b> UPI</b> </span>GPay || Phonepe || Paytm </h4>
+    <h4>Credit card </h4>
+    <h4>Debit card</h4>
+
+    <form action="/payment" method="POST">
+        <p> <b>Total Amount: ₹ <span id="total"></span></b></p>
+        <input type="hidden" name="total" id="total_input">
+        <select name="payment_method" id="payment_method">
+            <option value="upi">UPI</option>
+            <option value="credit card"> Credit card</option>
+            <option value="Debit card"> Debit card</option>
+            <option value="COD">Cash on Delivery</option>
+        </select>
+        <button type="submit">Pay Now</button>
+    </form>
+    <script>
+        const total=localStorage.getItem("totalPrice");
+        document.getElementById("total").textContent=total;
+        document.getElementById("total_input").value=total;
+    </script>
+</body>
+</html>
