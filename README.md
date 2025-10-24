@@ -51,8 +51,8 @@ The app allows users to browse food items, place orders, make payments, and stor
 ```
 ### 1️⃣ Clone the Repository
 ```bash
-git clone https://github.com/yourusername/zomato-mini.git
-cd zomato-mini
+git clone https://github.com/nimal1310/Zomato_Data_Analytics.git
+cd Zomato_Data_Analytics
 ```
 ```python
 python -m venv Zomao_app_etl
